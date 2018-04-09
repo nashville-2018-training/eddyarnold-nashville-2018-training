@@ -1,5 +1,5 @@
-uuid: b29b21b4-79d9-4f1f-aa29-04e1516646c4
-name: mjones-nashville-2018-training
+uuid: f2dcc158-2775-4cc6-949d-e64012d24b83
+name: eddyarnold-nashville-2018-training
 mail: mikejone@usc.edu
 slogan: ''
 page:
@@ -11,4 +11,4 @@ weight_select_max: 100
 langcode: en
 default_langcode: en
 _core:
-  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
