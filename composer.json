@@ -12,17 +12,18 @@
     "require": {
         "php": ">=7.0.8",
         "composer/installers": "^1.0.20",
-        "cweagans/composer-patches": "^1.0",
+        "cweagans/composer-patches": "~1.0",
         "drupal-composer/drupal-scaffold": "^2.0.1",
+        "drupal/address": "~1.0",
         "drupal/config_direct_save": "^1.0",
         "drupal/config_installer": "^1.0",
         "drupal/console": "^1",
         "drupal/core": "^8",
         "drupal/simple_block": "^1.0@beta",
-        "drush/drush": "~8",
-        "rvtraveller/qs-composer-installer": "^1.1",
         "drush-ops/behat-drush-endpoint": "^0.0.5",
+        "drush/drush": "~8",
         "pantheon-systems/quicksilver-pushback": "~1",
+        "rvtraveller/qs-composer-installer": "^1.1",
         "webflo/drupal-core-strict": "^8"
     },
     "require-dev": {
@@ -38,7 +39,7 @@
         "symfony/css-selector": "^2.8"
     },
     "conflict": {
-            "drupal/drupal": "*"
+        "drupal/drupal": "*"
     },
     "minimum-stability": "alpha",
     "prefer-stable": true,
@@ -72,6 +73,13 @@
         ]
     },
     "extra": {
+        "enable-patching": true,
+        "composer-exit-on-patch-failure": true,
+        "patches": {
+            "drupal/address": {
+                "The locality.name data is missed in PlainFormater": "https://www.drupal.org/files/issues/locality-name-data-missed-plainformater-2881391-1.patch"
+            }
+        },
         "installer-paths": {
             "web/core": ["type:drupal-core"],
             "web/modules/contrib/{$name}": ["type:drupal-module"],
